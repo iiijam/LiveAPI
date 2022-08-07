@@ -60,23 +60,15 @@ def huya(room_id: str) -> map:
         for b in rate:
             supportable_resolution[b['sDisplayName']] = f'_{b["iBitRate"]}'
         sort_dict = {}
-        for resolution, bitrate in supportable_resolution.items():
-            print(f'{resolution} {bitrate}')
-            url_dict = {}
-            for i in cdn:
-                cdn_type = i['cdnType']
-                url = i['url'].replace('http://', 'https://')
+        for cdn_type in cdn:
+            cdn_name = cdn_type['cdnType']
+            sort_dict[cdn_name] = {}
+            for resolution, bitrate in supportable_resolution.items():
+                url = cdn_type['url'].replace('http://', 'https://')
                 url = url.replace(
                     'imgplus.flv', f'imgplus{bitrate}.flv')
-                url_dict[cdn_type] = url
+                sort_dict[cdn_name][resolution] = url
 
-            sort_dict[resolution] = url_dict
-        display = ''
-        for resolution, url_dict in sort_dict.items():
-            display += f'{resolution}:\n'
-            for i in url_dict:
-                display += f'{i}\n'
-        print(display)
 
     return {
         'status': 200,
@@ -91,4 +83,3 @@ def huya(room_id: str) -> map:
             'cover': cover,
         }
     }
-
