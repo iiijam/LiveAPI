@@ -30,8 +30,9 @@ def huya(room_id: str) -> map:
         data = json.loads(html.text)['data']
 
         nick = data['profileInfo']['nick']
-        room_name = data['liveData']['roomName']
+        room_name = data['liveData']['introduction']
         liveStatus = data['liveStatus']
+        avatar = data['profileInfo']['avatar180']
     except:
         print('Room id is invalid!')
         return {'status': 404, 'message': 'Room id is invalid!'}
@@ -43,11 +44,14 @@ def huya(room_id: str) -> map:
             'message': 'Room is offline!',
             'data': {
                 'nick': nick,
-                'room_name': room_name,
-                'liveStatus': liveStatus
+                'title': room_name,
+                'roomId': room_id,
+                'liveStatus': liveStatus,
+                'avatar': avatar,
             }
         }
     else:
+        cover=data['liveData']['screenshot']
         stream_dict = data['stream']
         flv = stream_dict['flv']  
         cdn = flv['multiLine']  
@@ -58,18 +62,19 @@ def huya(room_id: str) -> map:
         sort_dict = {}
         for resolution, bitrate in supportable_resolution.items():
             print(f'{resolution} {bitrate}')
-            url_list = []
+            url_dict = {}
             for i in cdn:
+                cdn_type = i['cdnType']
                 url = i['url'].replace('http://', 'https://')
                 url = url.replace(
                     'imgplus.flv', f'imgplus{bitrate}.flv')
-                url_list.append(url)
+                url_dict[cdn_type] = url
 
-            sort_dict[resolution] = url_list
+            sort_dict[resolution] = url_dict
         display = ''
-        for resolution, url_list in sort_dict.items():
+        for resolution, url_dict in sort_dict.items():
             display += f'{resolution}:\n'
-            for i in url_list:
+            for i in url_dict:
                 display += f'{i}\n'
         print(display)
 
@@ -81,6 +86,9 @@ def huya(room_id: str) -> map:
             'title': room_name,
             'liveStatus': liveStatus,
             'links': sort_dict,
+            'roomId': room_id,
+            'avatar': avatar,
+            'cover': cover,
         }
     }
 
