@@ -1,0 +1,509 @@
+{
+    "roomProfile": {
+        "tCacheInfo": {
+            "iSourceType": 2,
+            "iUpdateTime": 1659859800,
+            "_classname": "LiveRoom.CacheInfo"
+        },
+        "lUid": 1571877666,
+        "iIsProfile": 1,
+        "iIsFreeze": 0,
+        "iIsMatchRoom": 1,
+        "iFreezeLevel": 0,
+        "_classname": "LiveRoom.GetLiveProfileResp",
+        "liveLineUrl": "Ly9ody5obHMuaHV5YS5jb20vc3JjLzc4OTQxOTY5LTI1NTg5MjQyNjAtMTA5OTA0OTYwMDk2NDEwMDA5NjAtMzE0Mzg3ODc4OC0xMDA1Ny1BLTAtMS1pbWdwbHVzLm0zdTg/cmF0aW89MjAwMCZ3c1NlY3JldD1mZDYzNDI1ZTVjZmZkMmY3NDRhYzBhZGE0NWE2YjVmMSZ3c1RpbWU9NjJmMGM0ZGEmZm09UkZkeE9FSmpTak5vTmtSS2REWlVXVjhrTUY4a01WOGtNbDhrTXclM0QlM0QmY3R5cGU9dGFyc19tb2JpbGUmdHh5cD1vJTNBZDMlM0ImZnM9YmdjdCZzcGhkY2RuPWFsXzctdHhfMy1qc18zLXdzXzctYmRfMi1od18yJnNwaGREQz1odXlhJnNwaGQ9MjY0XyotMjY1XyomdD0xMDM=",
+        "isFace": false
+    },
+    "roomInfo": {
+        "tCacheInfo": {
+            "iSourceType": 1,
+            "iUpdateTime": 1659859760,
+            "_classname": "LiveRoom.CacheInfo"
+        },
+        "eLiveStatus": 2,
+        "tProfileInfo": {
+            "lUid": 1571877666,
+            "lYyid": 1773600928,
+            "sNick": "KPL职业联赛",
+            "iSex": 2,
+            "iLevel": 31,
+            "sAvatar180": "https://huyaimg.msstatic.com/avatar/1010/66/6aba6b4323ab3c52960e7bf169d08e_180_135.jpg?1653400276",
+            "lProfileRoom": 660002,
+            "sPrivateHost": "kpl",
+            "lActivityId": 0,
+            "lActivityCount": 10579589,
+            "_classname": "LiveRoom.LiveProfileInfo"
+        },
+        "tLiveInfo": {
+            "lUid": 1571877666,
+            "lYyid": 1773600928,
+            "sNick": "KPL职业联赛",
+            "iSex": 2,
+            "iLevel": 31,
+            "sAvatar180": "https://huyaimg.msstatic.com/avatar/1010/66/6aba6b4323ab3c52960e7bf169d08e_180_135.jpg?1653400276",
+            "lProfileRoom": 660002,
+            "sPrivateHost": "kpl",
+            "sProfileHomeHost": "kpl",
+            "iIsPlatinum": 1,
+            "lActivityId": 0,
+            "lActivityCount": 10579589,
+            "iGid": 2336,
+            "iGameId": 820,
+            "sGameFullName": "王者荣耀",
+            "sGameHostName": "wzry",
+            "iBussType": 3,
+            "lLiveId": 7127902898978415000,
+            "lChannel": 1571877666,
+            "lLiveChannel": 1571877666,
+            "lUserCount": 9444519,
+            "lTotalCount": 9444519,
+            "iStartTime": 1659594220,
+            "iEndTime": 0,
+            "iTime": 4425,
+            "sRoomName": "【重播】17点 Hero vs WE KPL夏季赛",
+            "sIntroduction": "北京WB vs 苏州KSG KPL夏季赛",
+            "sPreviewUrl": "",
+            "iLiveSourceType": 12,
+            "iScreenType": 0,
+            "sScreenshot": "http://live-cover.msstatic.com/huyalive/78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1/20220807160724.jpg?streamName=78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1&interval=10",
+            "iRecommendStatus": 0,
+            "sRecommendTagName": "",
+            "iIsSecret": 0,
+            "iCameraOpen": 0,
+            "iCodecType": 0,
+            "iIsBluRay": 1,
+            "sBluRayMBitRate": "10M",
+            "iBitRate": 10000,
+            "lLiveCompatibleFlag": 16,
+            "iUpdateCacheTime": 1659859802,
+            "lMultiStreamFlag": 521,
+            "tLiveStreamInfo": {
+                "vStreamInfo": {
+                    "_bValue": 0,
+                    "value": [
+                        {
+                            "sCdnType": "WS",
+                            "iIsMaster": 0,
+                            "lChannelId": 1571877666,
+                            "lSubChannelId": 1571877666,
+                            "lPresenterUid": 1571877666,
+                            "sStreamName": "78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1-imgplus",
+                            "sFlvUrl": "http://ws.flv.huya.com/src",
+                            "sFlvUrlSuffix": "flv",
+                            "sFlvAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "sHlsUrl": "http://ws.hls.huya.com/src",
+                            "sHlsUrlSuffix": "m3u8",
+                            "sHlsAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "iLineIndex": 1,
+                            "iIsMultiStream": 1,
+                            "iPCPriorityRate": 22,
+                            "iWebPriorityRate": 22,
+                            "iMobilePriorityRate": 22,
+                            "vFlvIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "iIsP2PSupport": 2,
+                            "sP2pUrl": "http://ws.p2p.huya.com/huyalive",
+                            "sP2pUrlSuffix": "slice",
+                            "sP2pAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "lFreeFlag": 0,
+                            "iIsHEVCSupport": 3,
+                            "vP2pIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "_classname": "HUYA.StreamInfo"
+                        },
+                        {
+                            "sCdnType": "AL",
+                            "iIsMaster": 0,
+                            "lChannelId": 1571877666,
+                            "lSubChannelId": 1571877666,
+                            "lPresenterUid": 1571877666,
+                            "sStreamName": "78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1-imgplus",
+                            "sFlvUrl": "http://al.flv.huya.com/src",
+                            "sFlvUrlSuffix": "flv",
+                            "sFlvAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "sHlsUrl": "http://al.hls.huya.com/src",
+                            "sHlsUrlSuffix": "m3u8",
+                            "sHlsAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "iLineIndex": 3,
+                            "iIsMultiStream": 1,
+                            "iPCPriorityRate": 32,
+                            "iWebPriorityRate": 32,
+                            "iMobilePriorityRate": 32,
+                            "vFlvIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "iIsP2PSupport": 2,
+                            "sP2pUrl": "http://al.p2p.huya.com/huyalive",
+                            "sP2pUrlSuffix": "slice",
+                            "sP2pAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "lFreeFlag": 2,
+                            "iIsHEVCSupport": 3,
+                            "vP2pIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "_classname": "HUYA.StreamInfo"
+                        },
+                        {
+                            "sCdnType": "TX",
+                            "iIsMaster": 0,
+                            "lChannelId": 1571877666,
+                            "lSubChannelId": 1571877666,
+                            "lPresenterUid": 1571877666,
+                            "sStreamName": "78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1-imgplus",
+                            "sFlvUrl": "http://tx.flv.huya.com/src",
+                            "sFlvUrlSuffix": "flv",
+                            "sFlvAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "sHlsUrl": "http://tx.hls.huya.com/src",
+                            "sHlsUrlSuffix": "m3u8",
+                            "sHlsAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "iLineIndex": 5,
+                            "iIsMultiStream": 1,
+                            "iPCPriorityRate": -1,
+                            "iWebPriorityRate": -1,
+                            "iMobilePriorityRate": -1,
+                            "vFlvIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "iIsP2PSupport": 2,
+                            "sP2pUrl": "http://tx.p2p.huya.com/huyalive",
+                            "sP2pUrlSuffix": "slice",
+                            "sP2pAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "lFreeFlag": 1,
+                            "iIsHEVCSupport": 3,
+                            "vP2pIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "_classname": "HUYA.StreamInfo"
+                        },
+                        {
+                            "sCdnType": "HW",
+                            "iIsMaster": 0,
+                            "lChannelId": 1571877666,
+                            "lSubChannelId": 1571877666,
+                            "lPresenterUid": 1571877666,
+                            "sStreamName": "78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1-imgplus",
+                            "sFlvUrl": "http://hw-game.flv.huya.com/src",
+                            "sFlvUrlSuffix": "flv",
+                            "sFlvAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "sHlsUrl": "http://hw.hls.huya.com/src",
+                            "sHlsUrlSuffix": "m3u8",
+                            "sHlsAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "iLineIndex": 6,
+                            "iIsMultiStream": 1,
+                            "iPCPriorityRate": 46,
+                            "iWebPriorityRate": 46,
+                            "iMobilePriorityRate": 46,
+                            "vFlvIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "iIsP2PSupport": 2,
+                            "sP2pUrl": "http://hw-game.p2p.huya.com/huyalive",
+                            "sP2pUrlSuffix": "slice",
+                            "sP2pAntiCode": "wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "lFreeFlag": 0,
+                            "iIsHEVCSupport": 3,
+                            "vP2pIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "_classname": "HUYA.StreamInfo"
+                        },
+                        {
+                            "sCdnType": "AL13",
+                            "iIsMaster": 0,
+                            "lChannelId": 1571877666,
+                            "lSubChannelId": 1571877666,
+                            "lPresenterUid": 1571877666,
+                            "sStreamName": "78941969-2592787562-11135937784265572352-2914030356-10057-A-0-1-imgplus",
+                            "sFlvUrl": "http://al.flv.huya.com/src",
+                            "sFlvUrlSuffix": "flv",
+                            "sFlvAntiCode": "wsSecret=e395a203a590210ca225fd98fe4643ce&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ax41%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "sHlsUrl": "http://al.hls.huya.com/src",
+                            "sHlsUrlSuffix": "m3u8",
+                            "sHlsAntiCode": "wsSecret=e395a203a590210ca225fd98fe4643ce&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ax41%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "iLineIndex": 13,
+                            "iIsMultiStream": 1,
+                            "iPCPriorityRate": 0,
+                            "iWebPriorityRate": 0,
+                            "iMobilePriorityRate": 0,
+                            "vFlvIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "iIsP2PSupport": 2,
+                            "sP2pUrl": "http://al.p2p.huya.com/huyalive",
+                            "sP2pUrlSuffix": "slice",
+                            "sP2pAntiCode": "wsSecret=e395a203a590210ca225fd98fe4643ce&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ax41%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "lFreeFlag": 2,
+                            "iIsHEVCSupport": 3,
+                            "vP2pIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "_classname": "HUYA.StreamInfo"
+                        },
+                        {
+                            "sCdnType": "TX15",
+                            "iIsMaster": 0,
+                            "lChannelId": 1571877666,
+                            "lSubChannelId": 1571877666,
+                            "lPresenterUid": 1571877666,
+                            "sStreamName": "78941969-2592787562-11135937784265572352-2914030356-10057-A-0-1-imgplus",
+                            "sFlvUrl": "http://tx.flv.huya.com/src",
+                            "sFlvUrlSuffix": "flv",
+                            "sFlvAntiCode": "wsSecret=e395a203a590210ca225fd98fe4643ce&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ax41%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "sHlsUrl": "http://tx.hls.huya.com/src",
+                            "sHlsUrlSuffix": "m3u8",
+                            "sHlsAntiCode": "wsSecret=e395a203a590210ca225fd98fe4643ce&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ax41%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "iLineIndex": 15,
+                            "iIsMultiStream": 1,
+                            "iPCPriorityRate": -1,
+                            "iWebPriorityRate": -1,
+                            "iMobilePriorityRate": -1,
+                            "vFlvIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "iIsP2PSupport": 2,
+                            "sP2pUrl": "http://tx.p2p.huya.com/huyalive",
+                            "sP2pUrlSuffix": "slice",
+                            "sP2pAntiCode": "wsSecret=e395a203a590210ca225fd98fe4643ce&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ax41%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                            "lFreeFlag": 1,
+                            "iIsHEVCSupport": 3,
+                            "vP2pIPList": {
+                                "_proto": {
+                                    "_classname": "string"
+                                },
+                                "_bValue": 0,
+                                "value": [],
+                                "_classname": "list&lt;string&gt;"
+                            },
+                            "_classname": "HUYA.StreamInfo"
+                        }
+                    ],
+                    "_classname": "list&lt;HUYA.StreamInfo&gt;"
+                },
+                "mStreamRatio": {
+                    "_kproto": {
+                        "_classname": "string"
+                    },
+                    "_vproto": {
+                        "_classname": "int32"
+                    },
+                    "_bKey": 0,
+                    "_bValue": 0,
+                    "value": {
+                        "BD": -1,
+                        "AL13": 0,
+                        "TX": -1,
+                        "HUYA": -1,
+                        "AL": 32,
+                        "WS": 22,
+                        "HW": 46,
+                        "TX15": -1
+                    },
+                    "_classname": "map&lt;string,int32&gt;"
+                },
+                "vBitRateInfo": {
+                    "_bValue": 0,
+                    "value": [
+                        {
+                            "sDisplayName": "蓝光10M",
+                            "iBitRate": 0,
+                            "iCodecType": 0,
+                            "iCompatibleFlag": 0,
+                            "iHEVCBitRate": -1,
+                            "_classname": "LiveRoom.LiveBitRateInfo"
+                        },
+                        {
+                            "sDisplayName": "蓝光4M",
+                            "iBitRate": 4000,
+                            "iCodecType": 0,
+                            "iCompatibleFlag": 0,
+                            "iHEVCBitRate": 4000,
+                            "_classname": "LiveRoom.LiveBitRateInfo"
+                        },
+                        {
+                            "sDisplayName": "超清",
+                            "iBitRate": 2000,
+                            "iCodecType": 0,
+                            "iCompatibleFlag": 0,
+                            "iHEVCBitRate": 2000,
+                            "_classname": "LiveRoom.LiveBitRateInfo"
+                        },
+                        {
+                            "sDisplayName": "流畅",
+                            "iBitRate": 500,
+                            "iCodecType": 0,
+                            "iCompatibleFlag": 0,
+                            "iHEVCBitRate": 500,
+                            "_classname": "LiveRoom.LiveBitRateInfo"
+                        }
+                    ],
+                    "_classname": "list&lt;LiveRoom.LiveBitRateInfo&gt;"
+                },
+                "iDefaultLiveStreamBitRate": 2000,
+                "sDefaultLiveStreamLine": "HW",
+                "sDefaultLiveStreamSuffix": "m3u8",
+                "sDefaultLiveStreamUrl": "http://hw.hls.huya.com/src/78941969-2558924260-10990496009641000960-3143878788-10057-A-0-1-imgplus.m3u8?ratio=2000&wsSecret=fd63425e5cffd2f744ac0ada45a6b5f1&wsTime=62f0c4da&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&ctype=tars_mobile&txyp=o%3Ad3%3B&fs=bgct&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_*&t=103",
+                "_classname": "LiveRoom.LiveStreamInfo"
+            },
+            "iIsRoomPay": 0,
+            "iIsWatchTogetherVip": 0,
+            "tRoomPayInfo": {
+                "lUid": 0,
+                "iIsRoomPay": 0,
+                "iIsShowTag": 0,
+                "sRoomPayTag": "",
+                "sRoomPayPassword": "",
+                "_classname": "LiveRoom.RoomPayInfo"
+            },
+            "_classname": "LiveRoom.LiveInfo"
+        },
+        "tRecentLive": {
+            "lUid": 0,
+            "lYyid": 0,
+            "sNick": "",
+            "iSex": 0,
+            "iLevel": 0,
+            "sAvatar180": "",
+            "lProfileRoom": 0,
+            "sPrivateHost": "",
+            "sProfileHomeHost": "",
+            "iIsPlatinum": 0,
+            "lActivityId": 0,
+            "lActivityCount": 0,
+            "iGid": 0,
+            "iGameId": 0,
+            "sGameFullName": "",
+            "sGameHostName": "",
+            "iBussType": 0,
+            "lLiveId": 0,
+            "lChannel": 0,
+            "lLiveChannel": 0,
+            "lUserCount": 0,
+            "lTotalCount": 0,
+            "iStartTime": 0,
+            "iEndTime": 0,
+            "iTime": 0,
+            "sRoomName": "",
+            "sIntroduction": "",
+            "sPreviewUrl": "",
+            "iLiveSourceType": 0,
+            "iScreenType": 0,
+            "sScreenshot": "",
+            "iRecommendStatus": 0,
+            "sRecommendTagName": "",
+            "iIsSecret": 0,
+            "iCameraOpen": 0,
+            "iCodecType": 0,
+            "iIsBluRay": 0,
+            "sBluRayMBitRate": "",
+            "iBitRate": 0,
+            "lLiveCompatibleFlag": 0,
+            "iUpdateCacheTime": 0,
+            "lMultiStreamFlag": 0,
+            "_classname": "LiveRoom.RecentLiveInfo"
+        },
+        "tReplayInfo": {
+            "lUid": 0,
+            "lYyid": 0,
+            "sNick": "",
+            "iSex": 0,
+            "iLevel": 0,
+            "sAvatar180": "",
+            "lProfileRoom": 0,
+            "sPrivateHost": "",
+            "iIsPlatinum": 0,
+            "lActivityId": 0,
+            "lActivityCount": 0,
+            "iGid": 0,
+            "iGameId": 0,
+            "sGameFullName": "",
+            "sGameHostName": "",
+            "iBussType": 0,
+            "lLiveId": 0,
+            "lChannel": 0,
+            "lLiveChannel": 0,
+            "lUserCount": 0,
+            "lTotalCount": 0,
+            "iStartTime": 0,
+            "iEndTime": 0,
+            "iTime": 0,
+            "sRoomName": "",
+            "sIntroduction": "",
+            "sPreviewUrl": "",
+            "iLiveSourceType": 0,
+            "iScreenType": 0,
+            "sScreenshot": "",
+            "iIsSecret": 0,
+            "iCameraOpen": 0,
+            "iCodecType": 0,
+            "iIsBluRay": 0,
+            "sBluRayMBitRate": "",
+            "iBitRate": 0,
+            "lLiveCompatibleFlag": 0,
+            "lMultiStreamFlag": 0,
+            "tReplayVideoInfo": {
+                "sUrl": "",
+                "sHlsUrl": "",
+                "iVideoSyncTime": 0,
+                "_classname": "LiveRoom.ReplayVideoInfo"
+            },
+            "_classname": "LiveRoom.ReplayInfo"
+        },
+        "_classname": "LiveRoom.GetLiveRoomResp"
+    }}
