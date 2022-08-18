@@ -1,6 +1,7 @@
 # 获取斗鱼直播间的真实流媒体地址，默认最高画质
 # 使用 https://github.com/wbt5/real-url/issues/185 中两位大佬@wjxgzz @4bbu6j5885o3gpv6ss8找到的的CDN，在此感谢！
 import hashlib
+from msilib.schema import Error
 import re
 import time
 
@@ -167,7 +168,7 @@ class DouYu:
             json['data']['gift'] = []
             return json
         else:
-            return response
+            return 'Error'
 
     def douyu(self, full='enable', details='enable'):
         if self.rid == 0:
@@ -177,7 +178,7 @@ class DouYu:
             },400
         else:
             live_info = self.get_room_info()
-            try:
+            if live_info != 'Error':
                 basic_data = {
                     "avatar": live_info['data']['avatar'],
                     "cover": live_info['data']['room_thumb'],
@@ -208,7 +209,7 @@ class DouYu:
                         return{
                             "data": basic_data, "status": 200
                         }
-            except:
+            else:
                 return{
                 "message": f"Room id is invalid or not found,the id is{self.rid} andhere is the info{live_info}",
                 "status": 404
