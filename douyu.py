@@ -6,6 +6,7 @@ import time
 
 
 import execjs
+import js2py
 import requests
 
 
@@ -105,8 +106,14 @@ class DouYu:
         result = re.search(
             r'(vdwdae325w_64we[\s\S]*function ub98484234[\s\S]*?)function', res).group(1)
         func_ub9 = re.sub(r'eval.*?;}', 'strc;}', result)
-        js = execjs.compile(func_ub9)
-        res = js.call('ub98484234')
+
+        #js = execjs.compile(func_ub9)
+        context = js2py.EvalJs()
+        context.execute(func_ub9)
+
+        #res = js.call('ub98484234')
+        res = context.ub98484234()
+
 
         v = re.search(r'v=(\d+)', res).group(1)
         rb = DouYu.md5(self.rid + self.did + self.t10 + v)
