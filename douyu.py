@@ -4,8 +4,6 @@ import hashlib
 import re
 import time
 
-
-import execjs
 import js2py
 import requests
 
@@ -73,8 +71,12 @@ class DouYu:
         result = re.search(
             r'(function ub98484234.*)\s(var.*)', self.res).group()
         func_ub9 = re.sub(r'eval.*;}', 'strc;}', result)
-        js = execjs.compile(func_ub9)
-        res = js.call('ub98484234')
+        #js = execjs.compile(func_ub9)
+        context = js2py.EvalJs()
+        context.execute(func_ub9)
+
+        #res = js.call('ub98484234')
+        res = context.ub98484234()
 
         v = re.search(r'v=(\d+)', res).group(1)
         rb = DouYu.md5(self.rid + self.did + self.t10 + v)
@@ -84,8 +86,14 @@ class DouYu:
         func_sign = func_sign.replace(
             'CryptoJS.MD5(cb).toString()', '"' + rb + '"')
 
-        js = execjs.compile(func_sign)
-        params = js.call('sign', self.rid, self.did, self.t10)
+        #js = execjs.compile(func_sign)
+        #params = js.call('sign', self.rid, self.did, self.t10)
+
+        context = js2py.EvalJs()
+        context.execute(func_sign)
+
+        #res = js.call('ub98484234')
+        params = context.sign(self.rid, self.did, self.t10)
         params += '&ver=219032101&rid={}&rate=-1'.format(self.rid)
 
         url = 'https://m.douyu.com/api/room/ratestream'
@@ -123,8 +131,12 @@ class DouYu:
         func_sign = func_sign.replace(
             'CryptoJS.MD5(cb).toString()', '"' + rb + '"')
 
-        js = execjs.compile(func_sign)
-        params = js.call('sign', self.rid, self.did, self.t10)
+        context = js2py.EvalJs()
+        context.execute(func_sign)
+
+        #res = js.call('ub98484234')
+        params = context.sign(self.rid, self.did, self.t10)
+        params += '&ver=219032101&rid={}&rate=-1'.format(self.rid)
 
         params += '&cdn={}&rate={}'.format(cdn, rate)
         url = 'https://www.douyu.com/lapi/live/getH5Play/{}'.format(self.rid)
