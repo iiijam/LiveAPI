@@ -173,8 +173,8 @@ class DouYu:
         if self.rid == 0:
             return{
                 "message": "Room id is invalid",
-                "status": 404
-            },404
+                "status": 400
+            },400
         else:
             live_info = self.get_room_info()
             try:
@@ -210,7 +210,7 @@ class DouYu:
                         }
             except:
                 return{
-                "message": "Room id is invalid",
+                "message": "Room id is invalid or not found",
                 "status": 404
             },404
 
