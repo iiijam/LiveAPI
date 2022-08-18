@@ -210,7 +210,7 @@ class DouYu:
                         }
             except:
                 return{
-                "message": "Room id is invalid or not found",
+                "message": f"Room id is invalid or not found,the id is{self.rid} andhere is the info{live_info}",
                 "status": 404
             },404
 
