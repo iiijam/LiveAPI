@@ -1,0 +1,19 @@
+{//https://open.douyucdn.cn/api/RoomApi/room/71415
+    "error": 0,
+    "data": {
+        "room_id": "71415",
+        "room_thumb": "https://rpic.douyucdn.cn/asrpic/220818/71415_1434.png/dy1",//png为大图 dy1 是小图 dy2是400*400 dy3是500*500
+        "cate_id": "3753",
+        "cate_name": "摔角城大乱斗",
+        "room_name": "直播中....71415",
+        "room_status": "1",//直播状态 1直播中 2结束
+        "start_time": "2022-08-18 08:25:48",
+        "owner_name": "寅子",
+        "avatar": "https://apic.douyucdn.cn/upload/avatar/002/48/83/16_avatar_big.jpg",
+        "online": 4308405,
+        "hn": 4308405,
+        "owner_weight": "0",
+        "fans_num": "0",
+        "gift": []//礼物列表，没用
+    }
+}

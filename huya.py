@@ -22,7 +22,7 @@ def huya(room_id: str) -> map:
                     f'Your room id is invalid! The real room id is: {room_id}')
             except:
                 print('Room id is invalid!')
-                return {'status': 404, 'message': 'Room id is invalid!'}
+                return {'status': 404, 'message': 'Room id is invalid!'},404
         api_url = 'https://mp.huya.com/cache.php?m=Live&do=profileRoom&roomid='
         headers = {
             'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'}
@@ -35,10 +35,10 @@ def huya(room_id: str) -> map:
         avatar = data['profileInfo']['avatar180']
     except:
         print('Room id is invalid!')
-        return {'status': 404, 'message': 'Room id is invalid!'}
+        return {'status': 404, 'message': 'Room id is invalid!'},404
     
 
-    if liveStatus == "OFF":
+    if liveStatus == "OFF" or liveStatus == "REPLAY":
         return {
             'status': 200,
             'message': 'Room is offline!',

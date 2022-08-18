@@ -1,0 +1,84 @@
+{
+    "error": 0,
+    "msg": "ok",
+    "data": {
+        "room_id": 71415,
+        "is_mixed": false,
+        "mixed_live": "",
+        "mixed_url": "",
+        "rtmp_cdn": "hw-h5",
+        "rtmp_url": "https: //hwa.douyucdn2.cn/live",
+        "rtmp_live": "71415ryinzitv.flv?wsAuth=4cdd2f9e64d90c2d9ae67e9c6caffce7&token=web-h5-0-71415-4c9d97003d7f882ba4237bee40a7f33e14a059fb0d2739bc&logo=0&expire=0&did=10000000000000000000000000001501&pt=2&st=0&origin=tct&mix=0&isp=&pushdouyu=1",
+        "client_ip": "139.180.215.7",
+        "inNA": 0,
+        "rateSwitch": 1,
+        "rate": 0,
+        "cdnsWithName": [
+            {
+                "name": "备用线路5",
+                "cdn": "tct-h5",
+                "isH265": true
+            },
+            {
+                "name": "备用线路7",
+                "cdn": "hw-h5",
+                "isH265": true
+            }
+        ],
+        "multirates": [
+            {
+                "name": "原画1080P60",
+                "rate": 0,
+                "highBit": 1,
+                "bit": 17939,
+                "diamondFan": 0
+            },
+            {
+                "name": "蓝光8M",
+                "rate": 8,
+                "highBit": 1,
+                "bit": 8000,
+                "diamondFan": 0
+            },
+            {
+                "name": "蓝光4M",
+                "rate": 4,
+                "highBit": 1,
+                "bit": 4000,
+                "diamondFan": 0
+            },
+            {
+                "name": "超清",
+                "rate": 3,
+                "highBit": 0,
+                "bit": 2000,
+                "diamondFan": 0
+            },
+            {
+                "name": "高清",
+                "rate": 2,
+                "highBit": 0,
+                "bit": 900,
+                "diamondFan": 0
+            }
+        ],
+        "isPassPlayer": 0,
+        "eticket": null,
+        "online": 0,
+        "mixedCDN": "",
+        "p2p": 0,
+        "streamStatus": 1,
+        "smt": 0,
+        "p2pMeta": null,
+        "p2pCid": 0,
+        "p2pCids": "",
+        "player_1": "",
+        "h265_p2p": 0,
+        "h265_p2p_cid": 0,
+        "h265_p2p_cids": "",
+        "acdn": "",
+        "av1_url": "",
+        "rtc_stream_url": "",
+        "rtc_stream_config": ""
+    }
+}
