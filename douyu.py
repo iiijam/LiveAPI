@@ -65,7 +65,7 @@ class DouYu:
             rtmp_live = data['rtmp_live']
             key = re.search(
                 r'(\d{1,8}[0-9a-zA-Z]+)_?\d{0,4}(/playlist|.m3u8)', rtmp_live).group(1)
-        return error, key
+        return error, key, data
 
     def get_js(self):
         result = re.search(
@@ -122,7 +122,6 @@ class DouYu:
         #res = js.call('ub98484234')
         res = context.ub98484234()
 
-
         v = re.search(r'v=(\d+)', res).group(1)
         rb = DouYu.md5(self.rid + self.did + self.t10 + v)
 
@@ -143,24 +142,28 @@ class DouYu:
         res = self.s.post(url, params=params).json()['data']
         supported_reso = res['multirates']
         key = res['rtmp_live'].split('.')[0]
+        if '_' in key:
+            key = key.split('_')[0]
         real_url = {
-            'hw':{},
-            'ws':{},
+            'hw': {},
+            'ws': {},
         }
+        #real_url['raw'] = res
         for cdn in real_url:
             for reso in supported_reso:
                 bitrate = reso['bit']
                 type = reso['name']
+                print(key)
                 if reso['rate'] == 0:
-                    real_url[cdn][type]=f'http://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
+                    real_url[cdn][type] = f'http://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
                 else:
-                    real_url[cdn][type]=f'http://{cdn}-tct.douyucdn.cn/live/{key}_{bitrate}.flv?uuid='
-                #real_url[cdn]['xs']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.xs?uuid='
+                    real_url[cdn][type] = f'http://{cdn}-tct.douyucdn.cn/live/{key}_{bitrate}.flv?uuid='
+                # real_url[cdn]['xs']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.xs?uuid='
 
-        return real_url
+        return real_url, res
 
     def get_real_url(self):
-        error, key = self.get_pre()
+        error, key, res = self.get_pre()
         if error == 0:
             pass
         elif error == 102:
@@ -170,13 +173,13 @@ class DouYu:
         else:
             key = self.get_pre()
         real_url = {
-            'hw':{},
-            'ws':{},
+            'hw': {},
+            'ws': {},
         }
         for cdn in real_url:
-            real_url[cdn]['原画']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
-            #real_url[cdn]['xs']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.xs?uuid='
-        return real_url
+            real_url[cdn]['原画'] = f'http://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
+            # real_url[cdn]['xs']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.xs?uuid='
+        return real_url, res
 
     def get_room_info(self):
         url = f'https://open.douyucdn.cn/api/RoomApi/room/{self.rid}'
@@ -186,17 +189,17 @@ class DouYu:
             json['data']['gift'] = []
             return json
         else:
-            return 'Error'
+            return f'Error :{response.text}'
 
     def douyu(self, full='enable', details='enable'):
         if self.rid == 0:
             return{
                 "message": "Room id is invalid",
                 "status": 400
-            },400
+            }, 400
         else:
             live_info = self.get_room_info()
-            if live_info != 'Error':
+            if 'Error' not in live_info:
                 basic_data = {
                     "avatar": live_info['data']['avatar'],
                     "cover": live_info['data']['room_thumb'],
@@ -216,21 +219,25 @@ class DouYu:
                     if details == 'enable':
                         print(full)
                         if full == 'enable':
-                            data = self.get_pc_js()
+                            data, res = self.get_pc_js()
                         else:
-                            data = self.get_real_url()
+                            data, res = self.get_real_url()
                         basic_data['links'] = data
                         return{
-                            "data": basic_data, "status": 200
+                            "data": basic_data, "status": 200, "diagnostic": res
                         }
                     else:
                         return{
                             "data": basic_data, "status": 200
                         }
             else:
+                self.res = self.s.get(
+                    'https://m.douyu.com/' + str(self.rid)).text
+                result = re.search(r'rid":(\d{1,8}),"vipId', self.res)
+                if result:
+                    self.rid = result.group(1)
+                    return self.douyu(full, details)
                 return{
-                "message": f"Room id is invalid or not found,the id is{self.rid} andhere is the info{live_info}",
-                "status": 404
-            },404
-
-
+                    "message": f"Room id is invalid or not found,the id is {self.rid} and here is the info:{live_info}",
+                    "status": 404
+                }, 404
