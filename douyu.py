@@ -1,5 +1,6 @@
 # 获取斗鱼直播间的真实流媒体地址，默认最高画质
 # 使用 https://github.com/wbt5/real-url/issues/185 中两位大佬@wjxgzz @4bbu6j5885o3gpv6ss8找到的的CDN，在此感谢！
+from asyncio.windows_events import NULL
 import hashlib
 import re
 import time
@@ -65,7 +66,7 @@ class DouYu:
             rtmp_live = data['rtmp_live']
             key = re.search(
                 r'(\d{1,8}[0-9a-zA-Z]+)_?\d{0,4}(/playlist|.m3u8)', rtmp_live).group(1)
-        return error, key, data
+        return error, key, data, res
 
     def get_js(self):
         result = re.search(
@@ -163,23 +164,26 @@ class DouYu:
         return real_url, res
 
     def get_real_url(self):
-        error, key, res = self.get_pre()
+        error, key, data, diagnostic = self.get_pre()
+        real_url = {
+            'hw': {},
+            'ws': {},
+        }
         if error == 0:
             pass
         elif error == 102:
             raise Exception('房间不存在')
         elif error == 104:
             raise Exception('房间未开播')
+        elif error == 742017:
+            return real_url,  diagnostic
         else:
             key = self.get_pre()
-        real_url = {
-            'hw': {},
-            'ws': {},
-        }
+
         for cdn in real_url:
             real_url[cdn]['原画'] = f'http://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
             # real_url[cdn]['xs']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.xs?uuid='
-        return real_url, res
+        return real_url, data, diagnostic
 
     def get_room_info(self):
         url = f'https://open.douyucdn.cn/api/RoomApi/room/{self.rid}'
@@ -217,12 +221,14 @@ class DouYu:
                 else:
                     basic_data['liveStatus'] = 'ON'
                     if details == 'enable':
-                        print(full)
                         if full == 'enable':
                             data, res = self.get_pc_js()
                         else:
                             data, res = self.get_real_url()
                         basic_data['links'] = data
+                        if res['data'] == "":
+                            basic_data['liveStatus'] = 'OFF'
+
                         return{
                             "data": basic_data, "status": 200, "diagnostic": res
                         }
