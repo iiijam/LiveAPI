@@ -226,9 +226,9 @@ class DouYu:
                         else:
                             data, res = self.get_real_url()
                         basic_data['links'] = data
-                        if res['data'] == "":
+                        print(res)
+                        if 'data' in res and res['data'] == '':
                             basic_data['liveStatus'] = 'OFF'
-
                         return{
                             "data": basic_data, "status": 200, "diagnostic": res
                         }
