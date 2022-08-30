@@ -4,7 +4,6 @@
 import hashlib
 import re
 import time
-from tkinter.filedialog import dialogstates
 
 import js2py
 import requests
