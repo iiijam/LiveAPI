@@ -4,6 +4,7 @@
 import hashlib
 import re
 import time
+from tkinter.filedialog import dialogstates
 
 import js2py
 import requests
@@ -176,7 +177,7 @@ class DouYu:
         elif error == 104:
             raise Exception('房间未开播')
         elif error == 742017:
-            return real_url,  diagnostic
+            return real_url, data, diagnostic
         else:
             key = self.get_pre()
 
@@ -224,7 +225,9 @@ class DouYu:
                         if full == 'enable':
                             data, res = self.get_pc_js()
                         else:
-                            data, res = self.get_real_url()
+                            data, res,dia = self.get_real_url()
+
+                            #TODO fix args
                         basic_data['links'] = data
                         print(res)
                         if 'data' in res and res['data'] == '':
