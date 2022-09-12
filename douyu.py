@@ -115,7 +115,6 @@ class DouYu:
         result = re.search(
             r'(vdwdae325w_64we[\s\S]*function ub98484234[\s\S]*?)function', res).group(1)
         func_ub9 = re.sub(r'eval.*?;}', 'strc;}', result)
-
         #js = execjs.compile(func_ub9)
         context = js2py.EvalJs()
         context.execute(func_ub9)
@@ -168,6 +167,7 @@ class DouYu:
         real_url = {
             'hw': {},
             'ws': {},
+            'akm': {}
         }
         if error == 0:
             pass
@@ -181,7 +181,7 @@ class DouYu:
             key = self.get_pre()
 
         for cdn in real_url:
-            real_url[cdn]['原画'] = f'http://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
+            real_url[cdn]['原画'] = f'https://{cdn}-tct.douyucdn.cn/live/{key}.flv?uuid='
             # real_url[cdn]['xs']=f'http://{cdn}-tct.douyucdn.cn/live/{key}.xs?uuid='
         return real_url, data, diagnostic
 
@@ -196,6 +196,7 @@ class DouYu:
             return f'Error :{response.text}'
 
     def douyu(self, full='enable', details='enable'):
+        
         if self.rid == 0:
             return{
                 "message": "Room id is invalid",
